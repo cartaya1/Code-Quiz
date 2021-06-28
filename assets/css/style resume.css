@@ -1,0 +1,60 @@
+/* Create CSS variables at the root of the document to be used throughout the style sheet */
+:root {
+  --white: #fff;
+  --dark-blue: #13293d;
+}
+body {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-start;
+}
+main {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+  }
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+header {
+  padding: 40px;
+  text-align: center;
+  background: var(--dark-blue);
+  color: var(--white);
+}
+nav {
+  display: flex;
+  background-color: grey;
+}
+nav a {
+  color: var(--dark-blue);
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+nav a:hover {
+  background-color: var(--white);
+  color: var(--dark-blue);
+}
+footer {
+  width: 100%;
+  bottom: 0;
+  padding: 20px;
+  text-align: center;
+  background: var(--dark-blue);
+  color: var(--white);
+  margin-top: auto;
+}
+@media screen and (max-width: 768px) {
+  body,
+  nav {
+    flex-direction: column;
+  }
+}
