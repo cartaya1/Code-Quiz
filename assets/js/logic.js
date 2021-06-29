@@ -1,7 +1,13 @@
-var timeElement = document.querySelector("#time");
-var questionChoices = document.querySelector("#choices");
-var starScreen = document.querySelector("#start-screen");
+var time = question.length * 60;
+var currentQuestionIndex = 0;
+
+var starBtn = document.querySelector("#start");
+var questionsElement = document.querySelector("#questions");
+var timeElement =  document.querySelector("#time");
+var questionChoice = document.querySelector("#choices");
+var startScreen = document.querySelector("#start-screen");
 var titleElement = document.querySelector("#question-title");
+
 
 function startQuiz () {
     starScreen.setAttribute("class", "hide");
@@ -22,3 +28,5 @@ function getcurrenteQuestion(){
             questionChoices.appendChild(choiceNode);
         }
 }
+
+starBtn.addEventListener("Click", startQuiz);
