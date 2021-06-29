@@ -12,6 +12,7 @@ var titleElement = document.querySelector("#question-title");
 function startQuiz () {
     starScreen.setAttribute("class", "hide");
     questionElement.removeAttribute("class");
+    starBtn.addEventListener("Click", startQuiz);
 }
 function getcurrenteQuestion(){
     var currentQuestion = question[curentQuestionIndex];
@@ -29,4 +30,3 @@ function getcurrenteQuestion(){
         }
 }
 
-starBtn.addEventListener("Click", startQuiz);

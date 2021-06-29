@@ -1,114 +1,89 @@
 :root{
     --ClearText: whitesmoke;
     --DBlue: #406a91;
-    --Dark: #31343D;
+    --Dark: rgb (29,26,26)
     --CBlue: #92ccce;
+    
 }
-body {
-    font-size: 16px;
+* {
+    box-sizing: border-box;
+    font-size: 25px;
+    padding: 0;
+    background-color: var (--Dark);
+    font-family: Times New Roman, Times, serif;
+}
+h1{
+    font-size: 100px;
+    color: var var(--ClearText);
+    margin-bottom: 8%;
+}  
+
+h2{
+    font-size: 20px;
+    color: var var(--DBlue);
+    margin-bottom: 5%;
+}  
+.container {
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    justify-content: center;
+    }
+
+.flex-column{
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    justify-content: justify;
-    background-color: var(--ClearText);
-    }
-/*Big image format */
-.HeadPic{
-    height: 600px;
-    width: 100%;
-    margin-bottom: 20px;
-    background-image: url("../images/Title Blue.jpg");
-    background-size: cover;
-    background-position: top;
 }
-.header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.flex-center{
     align-items: center;
-    padding: 10px 10px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
-    background-color: var(--Dark);
-    color:var(--ClearText);
+    justify-content: center;
 }
-/*Header in line to call Work boxes*/
-.header h1 {
-    display: inline-block;
-    font-size: 60px; 
-    background-color: var(--CBlue);
-    color: red;
-    padding: 1% 1%;
+.text-center{
+    text-align: center;
 }
-/* For just mark part of Title */
-.header h1 .Name {
-    color: var(--DBlue);
-    }
-.header Nav {
-    display: inline-block;
-    padding-top: 20px;
-    margin-right: 20px;
-    float: right;
-    padding: 10px;
-    color: var(--ClearText);
+.hidden{
+    display: none;
 }
-.header Nav a {
+.btn{
     font-size: 25px;
-    font-family: Times New Roman, Times, serif;
+    padding: 1% 0;
+    width: 15%;
+    text-align: center;
+    margin-bottom: 2%;
     color: var(--ClearText);
+    background-color: var(--DBlue);
+    border-radius: 5%;
 }
-/*format of Work boxes (insede each) */
-.work-box {
-    margin-left: 25%;
-    margin-bottom: 15px;
-    height: 200px;
-    width: 75%;
-    padding: 1%;
-    background-color: var(--ClearText);
-    flex-wrap: wrap;
-    border-left: 3px solid BLACK;
-    border-left-width:thick;
+.btn:hover{
+    cursor: pointer;
+    box-shadow: 0 1rem 0 var(--Dark);
+    transition: transform 150ms;
+    transform: scale(1.5);
 }
-/*format of Work boxes (Texts) */ 
-    .work-box h2 {
-        margin-top: 0%;
-        margin-left: -30%;
-        font-size: 50px;
-        text-align: left;
-        font-family: Times New Roman, Times, serif;
-        color: var(--DBlue);
-        }
-    .work-box p{
-        display: inline-block;
-        font-size: 15px;
-        margin-top: 0px;
-        text-align: justify;
-        font-family: Times New Roman, Times, serif;
-        color: var(--Dark);
-        flex-wrap: wrap;
+.btn[disabled]:hover{
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+@media screen and (max-width: 768px) {
+    .container {
+      flex-direction: row;
+      min-width: 40rem;
     }
-    .work-box nav a{
-        padding-top: 0px;
-        margin-right: 60px;
-        float: right;
-        font-size: 18px;
-        font-family: Times New Roman, Times, serif;
-        color: var(--Dark);
-    }
-    @media screen and (max-width: 768px) {
-        body,
-        nav {
-          flex-direction: row;
-        }
-      }
+  }
 /*Foot of page - personal menssage */
     .footer {
-        margin-bottom: 20px;
-        padding: 30px;
+        margin-bottom: 5px;
+        padding: 5px;
         clear: both;
         font-family: Times New Roman, Times, serif;
         text-align: center;
+        font-size: 15px;
     }
     .footer h2 {
         font-size: 25px;
+        margin-bottom: 1%;
     }

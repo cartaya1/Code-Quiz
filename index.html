@@ -1,54 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Code Quiz (JAVA)</title>
+  <title>Code Quiz - Home</title>
   <link rel="stylesheet" href="./assets/css/reset.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
+
 </head>
+
 <body>
-  <header>
-    <div class="scores"><a href="highscore.html">View Highscores</a></div>
-    <div class="timer">Time: <span id="time">0</span> </div>
-
-    <div class="wrapper">
-      <div id="start-screen" class="start">
-        <h1>JAVA Code Quiz.</h1>
-        <P>
-          Try answers all Questions in the minimal time posible, Just have 60 Seconds! (a, b, c or d)
-        </P>
-        <button id="start">Start Quiz</button>
-      </div>
+  <div class="container">
+    <div id="home" class="flex-column flex-center">
+      <h1>Are your ready for this Test?</h1>
+      <a href="./questions.html" class="btn">Play Now.</a>
+      <a href="./highscores.html" id="highscore-btn" class="btn">Highscores.</a>
     </div>
+  </div>
 
-    <div id="questions" class="hide">
-      <h2 id="question-title"></h2>
-      <div id="choices" class="choices"></div>
-    </div>
-
-    <div id="end-screen" class="hide">
-      <h2>ALL Done!</h2>
-      <P>
-        Your Score after Try is: <span id="final-score"></span>.
-      </P>
+    <!--finnish my personal menssage-->
+    <div class="footer">
+      <h2>Made with ❤️️ by Cartaya' House</h2>
       <p>
-        Enter Your Initials: <input type="text" id="initials" max="3" />
-        <button id="submit">Submit</button>
+        &copy; 2021 Cartaya' House Inc. - Social Media Services. (by LRC)
       </p>
     </div>
-    <div id="feedback" class="feedback hide"></div>
-    </div>
-  </header>
 
-  <!--finnish my personal menssage-->
-  <div class="footer">
-    <h2>Made with ❤️️ by Cartaya' House</h2>
-    <p>
-      &copy; 2021 Cartaya' House Inc. - Social Media Services. (by LRC)
-    </p>
-  </div>
-  <script src=". /assets/js/logic.js"></script>
-  <script src=". /assets/js/questions.js"></script>
   <script type="text /javascript" src="./assets/js/script.js"></script>
-</body>
+
+</html>
