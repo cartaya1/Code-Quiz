@@ -1,5 +1,5 @@
 var questionElement = document.querySelector("#question");
-var choices = document.querySelector(".choice-text");
+var choices = document.querySelector(".choice-container");
 var progressText = document.querySelector("#progressText");
 var scoreText = document.querySelector("#score");
 var progressBarFull = document.querySelector("#progressBarFull");
@@ -94,8 +94,14 @@ var questions = [
         choice3: "It modifies the existing string in the database",
         choice4: "None of the above",
         answer: 1,
-    },
+        },
 ];
+
+        console.log(choice1);
+        console.log(choice2);
+        console.log(choice3);
+        console.log(choice4);
+
 // incrementation of score
 var SCORE_POINT = 100;
 var MAX_QUESTIONS = 5;
@@ -138,7 +144,7 @@ choices.forEach(choice => {
         var selectedChoice = event.target;
         var selectedAnswer = selectedChoice.dataset['number'];
 
-        let classToApply = selectedAnswer == currentQuestion ? 'correct' : 'incorrect';
+        let classToApply = (selectedAnswer == currentQuestion) ? 'correct' : 'incorrect';
 
         if (classToApply === 'correct') {
             incrementScore(SCORE_POINT);

@@ -4,22 +4,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Code Quiz - High Scores</title>
+  <title>Code Quiz - End</title>
   <link rel="stylesheet" href="./assets/css/reset.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/questions.css" />
 
 </head>
-
 <body>
-<h1>Thanks for Try</h1>  
-
-    <!--finnish my personal menssage-->
+  <div class="container">
+      <div id="end" class="flex-center flex-column">
+        <h1 id="finalscore">0</h1>
+        <form class="end-form-container">
+          <h2 id="end-text">Enter your initials (3 MAX) and save your Score.</h2>
+          <input type="text" name="name" id="username" placeholder="Enter initials"> 
+          <button class="btn" id="saveScoreBtn" type="submit" onClick=saveHighScore(event)" disable>Save</button>
+        </form>
+        <a href="./questions.html" class="btn">Play Again</a>
+        <a href="./index.html" class="btn">Go Home</a>
+      </div>
+  </div>
+</body>
+    <!--finnish my personal menssage
     <div class="footer">
       <h2>Made with ❤️️ by Cartaya' House</h2>
       <p>
         &copy; 2021 Cartaya' House Inc. - Social Media Services. (by LRC)
       </p>
-    </div>
+    </div>-->
 
   <script type="text /javascript" src="./assets/js/script.js"></script>
 
