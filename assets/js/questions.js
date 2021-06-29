@@ -96,21 +96,25 @@ var questions = [
         answer: 1,
     },
 ];
+// incrementation of score
 var SCORE_POINT = 100;
 var MAX_QUESTIONS = 5;
 
-startGame = () => {
+//Begiining test
+startTest = () => {
     questionCounter = 0;
     score = 0;
     availableQuestion = [questions];
     getNewQuestion()
 }
+//aliatory questions
 getNewQuestion() = () => {
     if (availableQuestion.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostResentScore', score);
 
         return window.location.assign('./end.html');
     }
+    //incrementation of Array value
     questionCounter++;
     progressText.innerText = 'Question ${questionCounter} of ${MAX_QUESTIONS}';
     progressBarFull.style.width = '${(questionCounter/MAX_QUESTION) * 100}%';
@@ -127,11 +131,11 @@ getNewQuestion() = () => {
     acceptingAnswers = true;
 }
 choices.forEach(choice => {
-    choice.addEventelistener('click', e => {
+    choice.addEventelistener('click', event => {
         if (!acceptingAnswers) return;
 
         acceptingAnswers = false;
-        var selectedChoice = e.target;
+        var selectedChoice = event.target;
         var selectedAnswer = selectedChoice.dataset['number'];
 
         let classToApply = selectedAnswer == currentQuestion ? 'correct' : 'incorrect';
@@ -152,4 +156,4 @@ incrementScore = num => {
     score += num;
     scoreText.innerText = score;
 }
-startGame();
+startTest();
