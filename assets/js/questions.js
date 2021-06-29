@@ -102,7 +102,7 @@ var MAX_QUESTIONS = 5;
 startGame = () => {
     questionCounter = 0;
     score = 0;
-    availableQuestion = [,,,,questions];
+    availableQuestion = [questions];
     getNewQuestion()
 }
 getNewQuestion() = () => {
@@ -111,20 +111,19 @@ getNewQuestion() = () => {
 
         return window.location.assign('./end.html');
     }
-
-    questionCounter++
+    questionCounter++;
     progressText.innerText = 'Question ${questionCounter} of ${MAX_QUESTIONS}';
     progressBarFull.style.width = '${(questionCounter/MAX_QUESTION) * 100}%';
 
-    var questionsIndex = Math.floor(Math.random() * availableQuestions.length);
-    currentQuestion = avaliableQuestion[questionsIndex];
+    var questionIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = avaliableQuestion[questionIndex];
     questions.innerText = currentQuestion.question;
 
     choice.forEach(choice => {
         var number = choice.dataset['number'];
         choice.innerText = currentQuestion['choice' + number];
     });
-    availableQuestion.splice(questionsIndex, 1);
+    availableQuestion.splice(questionIndex, 1);
     acceptingAnswers = true;
 }
 choices.forEach(choice => {
@@ -133,9 +132,9 @@ choices.forEach(choice => {
 
         acceptingAnswers = false;
         var selectedChoice = e.target;
-        var selectedChoice = selectedChoice.dataset['number'];
+        var selectedAnswer = selectedChoice.dataset['number'];
 
-        let classToApply = selectAnswer == currentQuestion ? 'correct' : 'incorrect';
+        let classToApply = selectedAnswer == currentQuestion ? 'correct' : 'incorrect';
 
         if (classToApply === 'correct') {
             incrementScore(SCORE_POINT);
@@ -153,4 +152,4 @@ incrementScore = num => {
     score += num;
     scoreText.innerText = score;
 }
-startQuestions();
+startGame();
