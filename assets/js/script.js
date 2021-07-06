@@ -112,7 +112,6 @@ function setTime() {
       startButton.setAttribute("style", "display: none");
       submitButton.setAttribute("style", "display: inline");
       inputLine.setAttribute("style", "display: inline-block");
-
     }
   }, 3000);
 }
@@ -181,23 +180,14 @@ for (var i = 0; i < quizBtn.length; i++) {
 // High Scores 
 
 var highscores = JSON.parse(localStorage.getItem("highscores")) || [];
-
 submitButton.addEventListener("click", function (event) {
   event.stopPropagation();
   console.log("click");
-
   var initials = inputLine.value;
   var finalScore = { initials, secondsLeft };
   console.log("Final Score: " + finalScore);
   console.log(initials + " your score is: " + secondsLeft);
-
-
-
-
   // Send to localStorage
-
   highscores.push(finalScore);
   localStorage.setItem("highscores", JSON.stringify(highscores));
-
 });
-

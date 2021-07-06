@@ -10,7 +10,7 @@
     font-family: Times New Roman, Times, serif;
 }
 body {
-background-color: var(--ClearText);
+background-color: var(--Cblue);
 }
 
 #row1 {
@@ -22,8 +22,8 @@ background-color: var(--ClearText);
 }
 
 .col-3 {
-    color: var(--ClearText);
-    text-align: center;
+    color: var(--Cblue);
+    text-align: right;
 }
 
 #highScore {
@@ -52,11 +52,6 @@ background-color: var(--ClearText);
 .card {
     background-color: var(--DBlue);
 }
-
-img {
-    width: 450px;
-}
-
 .col-4 {
     text-align: -webkit-center;
 }
