@@ -12,99 +12,78 @@
 body {
 background-color: var(--Cblue);
 }
-
 #row1 {
     padding: 10px;
 }
-
 #row2 {
     justify-content: center;
 }
-
 .col-3 {
     color: var(--Cblue);
     text-align: right;
 }
-
 #highScore {
     color: var(--DBlue);
 }
-
 .display-3 {
     text-align: center;
     margin-top: -50px;
 }
-
 .lead {
     text-align: center;
 }
-
 .jumbotron {
     background-color: var(--DBlue);
     height: 270px;
 }
-
 .buttonRow {
     justify-content: center;
     padding: 5px;
 }
-
 .card {
     background-color: var(--DBlue);
 }
 .col-4 {
     text-align: -webkit-center;
 }
-
 #questionsCard {
     display: none;
 }
-
 #answerIncorrect {
     font-size: xx-large;
 }
-
 #buttonInitials {
     display: none;
 }
-
 #inlineFormInput {
     display: none;
     width: 30%;
 }
-
 /* highScores HTML */
-
 #highRow {
     padding: 10px;
 }
-
 #javaquiz {
     color: var(--DBlue);
 }
-
 #header {
     font-size: 4.5rem;
     font-weight: 300;
     line-height: 1.2;
     background-color:var(--Dark);
 }
-
 /* Media query */
-
 @media (max-width: 1148px){
     #imageMedia {
         display: none;
     }
 }
-
 @media (max-width: 1206px){
     #imagenDisplay {
         display: none;
     }
 
 }
-
 @media (max-width: 830px) {
     .display-3 {
         font-size: 350%;
