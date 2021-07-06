@@ -1,46 +1,89 @@
-# Code-Quiz
+# 04 Web APIs: Code Quiz
 
+## Your Task
 
-These paragraphs below i found when google search and help me a lot with this. 
+At some point in your journey to become a full-stack web developer, you’ll likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges. 
 
-How to Create a Quiz with Random Questions Using Java.
-By Micah McDunnigan
+To help familiarize you with these tests and allow you to use the skills covered in this unit, this week’s homework invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. 
 
-One of the benefits of learning to program in a cross-platform language, such as Java, is that if you need a specialized tool, such as a quiz program that will randomly select its items from a bank of questions, you can make it yourself. It is also a useful project if you are a beginner with Java, because it introduces you to the language's random utility and gives you practice with control structures such as loops.
+This week’s coursework will equip you with all the skills you need to succeed in this assignment.
 
-Step 1
-Import the necessary libraries with the syntax at the very top of your source code: import java.util.random; import java.io.*;
+## User Story
 
-Step 2
-Declare a new random number generator in your "public static void main" class with the syntax "Random randomizer = new Random();" where "randomizer" is the name you choose to give to your randomizing object and then declare a console object with the syntax "Console input = new Console();" where "input" is the name you give the console object.
+```
+AS A coding boot camp student
+I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
+SO THAT I can gauge my progress compared to my peers
+```
 
-Step 3
-Declare the following variables:
-int choice; String selection;
-where "choice" is the name you will give the variable that will hold the random question selection, and "selection" is the name you will give the variable that will hold the user's answer selection.
+## Acceptance Criteria
 
-Step 4
-Declare a string array with the syntax "QuestionList = new String[n][2];" where n is the number of questions your quiz will include and "QuestionList is the name you will use for your array.
+```
+GIVEN I am taking a code quiz
+WHEN I click the start button
+THEN a timer starts and I am presented with a question
+WHEN I answer a question
+THEN I am presented with another question
+WHEN I answer a question incorrectly
+THEN time is subtracted from the clock
+WHEN all questions are answered or the timer reaches 0
+THEN the game is over
+WHEN the game is over
+THEN I can save my initials and my score
+```
 
-Step 5
-Use the following syntax for each question from which you want your program to draw:
-QuestionList[n][0] = "My Question \nA: Answer One\nB: Answer Two\nC: Answer Three"; QuestionList[n][1] = "Correct Answer"; where "n" is the number of your question (starting at zero), "My Question" is the question, A - C are the possible answer choices, and "Correct Answer is the letter corresponding to the correct answer. The "\n" will make the console start displaying text on a new line, so the above sytntax will display as:
-My Question A: Answer One B: Answer Two C: Answer Three
+## Mock-Up
 
-Step 6
-Create a loop with the syntax:
-int round = 0; while (round < questions){
-(rest of program here)
-round = round + 1; }
-where "round" is the name you will give to a variable that will track the number of questions the program has displayed, and "questions" is the number of questions you want your quiz program to ask before quitting. The remainder of the code will go between "while (round < questions)(" and "round = round + 1;
+The following animation demonstrates the application functionality:
 
-Step 7
-Generate a random question with the syntax "choice = randomizer.nextInt(n);" where "n" is the total number of questions you added to your pool (starting at one, not zero).
+![A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.](./Assets/04-web-apis-homework-demo.gif)
 
-Step 8
-Display your choice with the syntax "System.out.println(QuestionList[choice][0];" then type "selection = input.readLine();" on the next line. This will display the question and let the user type in an answer.
+## Grading Requirements
 
-Step 9
-Use the following syntax to check the answer:
-if (selection.equals(QuestionList[choice][1]){ System.out.println("Correct!"); }
-else{ System.out.println("Incorrect, the answer was " + QuestionList[choice][1]); }
+This homework is graded based on the following criteria: 
+
+### Technical Acceptance Criteria: 40%
+
+* Satisfies all of the preceding acceptance criteria.
+
+### Deployment: 32%
+
+* Application deployed at live URL.
+
+* Application loads with no errors.
+
+* Application GitHub URL submitted.
+
+* GitHub repository contains application code.
+
+### Application Quality: 15%
+
+* Application user experience is intuitive and easy to navigate.
+
+* Application user interface style is clean and polished.
+
+* Application resembles the mock-up functionality provided in the homework instructions.
+
+### Repository Quality: 13%
+
+* Repository has a unique name.
+
+* Repository follows best practices for file structure and naming conventions.
+
+* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+
+* Repository contains multiple descriptive commit messages.
+
+* Repository contains quality readme file with description, screenshot, and link to deployed application.
+
+## Review
+
+You are required to submit BOTH of the following for review:
+
+* The URL of the functional, deployed application.
+
+* The URL of the GitHub repository, with a unique name and a readme describing the project.
+
+---
+
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

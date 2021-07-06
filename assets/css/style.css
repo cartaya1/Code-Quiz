@@ -6,109 +6,132 @@
 }
 * {
     box-sizing: border-box;
-    font-size: 30px;
+    font-size: 20px;
     font-family: Times New Roman, Times, serif;
 }
-h1{
-    font-size: 100px;
-    color: var var(--ClearText);
-    margin-bottom: 8%;
-}  
-
-h2{
-    font-size: 20px;
-    color: var var(--DBlue);
-    margin-bottom: 5%;
-}  
-.container {
-    width: 100vw;
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    max-width: 80rem;
-    margin: 0 auto;
-    justify-content: center;
-    }
-
-.flex-column{
-    display: flex;
-    flex-direction: column;
+body {
+background-color: var(--ClearText);
 }
-.flex-center{
-    align-items: center;
+
+#row1 {
+    padding: 10px;
+}
+
+#row2 {
     justify-content: center;
 }
-.text-center{
+
+.col-3 {
+    color: var(--ClearText);
     text-align: center;
 }
-.hidden{
+
+#highScore {
+    color: var(--DBlue);
+}
+
+.display-3 {
+    text-align: center;
+    margin-top: -50px;
+}
+
+.lead {
+    text-align: center;
+}
+
+.jumbotron {
+    background-color: var(--DBlue);
+    height: 270px;
+}
+
+.buttonRow {
+    justify-content: center;
+    padding: 5px;
+}
+
+.card {
+    background-color: var(--DBlue);
+}
+
+img {
+    width: 450px;
+}
+
+.col-4 {
+    text-align: -webkit-center;
+}
+
+#questionsCard {
     display: none;
 }
-.btn{
-    align-items: flex-center;
-    font-size: 25px;
-    padding: 2% 2% 2% 2%;
-    width: 50%;
-    text-align: center;
-    margin-bottom: 2%;
-    color: var(--ClearText);
-    background-color: var(--DBlue);
-    border-radius: 5%;
-}
-.btn:hover{
-    cursor: pointer;
-    box-shadow: 0 0.5rem 0 var(--Dark);
-    transition: transform 150ms;
-    transform: scale(1.2);
-}
-.btn[disabled]:hover{
-    cursor: not-allowed;
-    box-shadow: none;
-    transform: none;
+
+#answerIncorrect {
+    font-size: xx-large;
 }
 
-.end-form-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 30rem;
-    margin-bottom: 5%;
+#buttonInitials {
+    display: none;
 }
 
-input{
-    width: 50%;
-    margin-bottom: 2%;
-    padding: 2%;
-    font-size: 30px;
-}
-input::placeholder{
-    color: var(--DBlue)
+#inlineFormInput {
+    display: none;
+    width: 30%;
 }
 
-#username {
-    margin-bottom: 5%;
-    width: 100%;
-    outline: none;   
+/* highScores HTML */
+
+#highRow {
+    padding: 10px;
 }
 
+#javaquiz {
+    color: var(--DBlue);
+}
 
-@media screen and (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      min-width: 40rem;
+#header {
+    font-size: 4.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    background-color:var(--Dark);
+}
+
+/* Media query */
+
+@media (max-width: 1148px){
+    #imageMedia {
+        display: none;
     }
-  }
+}
+
+@media (max-width: 1206px){
+    #imagenDisplay {
+        display: none;
+    }
+
+}
+
+@media (max-width: 830px) {
+    .display-3 {
+        font-size: 350%;
+        margin-top: 1px;
+    }
+    .jumbotron {
+        height: 100%;
+    }
+    #imagen1 {
+        float: right;
+    }
+    #cardMedia {
+        float: right;
+    }
+}
 /*Foot of page - personal menssage */
-    .footer {
-        margin-bottom: 5px;
-        padding: 3%;
-        clear: both;
-        font-family: Times New Roman, Times, serif;
-        text-align: center;
-        font-size: 15px;
-    }
-    .footer h2 {
-        font-size: 25px;
-        margin-bottom: 1%;
-    }
+.footer {
+    text-align: center;
+    clear: both;
+    text-align: center;
+    font-size: 15px;
+}
+.footer h2 {
+    font-size: 20px;
+}
